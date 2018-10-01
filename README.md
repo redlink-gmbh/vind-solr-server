@@ -8,8 +8,8 @@ docker build -t myimages/vind-solr-server .
 ```
 
 ## Use Docker image
-Run the image and expose the Solr standard port:
+Run the image and expose the Solr standard port. The number of the server is alligned to the Vind version.
 ```
-docker run -p 8983:8983 redlinkgmbh/vind-solr-server
+docker run -p 8983:8983 redlinkgmbh/vind-solr-server:1.3.0
 ```
 Now you can access the core named *vind* on http://localhost:8983/solr.
