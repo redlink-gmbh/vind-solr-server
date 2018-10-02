@@ -1,4 +1,4 @@
-#Vind Solr Server
+# Vind Solr Server
 Vind Solr Server provides a dockerized Solr Server that already includes a core following the Vind Schema (https://github.com/RBMHTechnology/vind).
 
 ## Build Docker image
