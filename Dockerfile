@@ -22,4 +22,4 @@ mkdir lib && \
 cd lib && \
 wget https://search.maven.org/remotecontent?filepath=com/rbmhtechnology/vind/solr-suggestion-handler/${VERSION}/solr-suggestion-handler-${VERSION}.jar
 
-ENTRYPOINT ["sh", "-c", "solr/bin/solr start -f -s /solr/solrhome"]
+ENTRYPOINT ["sh", "-c", "solr/bin/solr start -f -force -s /solr/solrhome"]
