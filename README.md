@@ -13,3 +13,10 @@ Run the image and expose the Solr standard port. The number of the server is all
 docker run -p 8983:8983 redlinkgmbh/vind-solr-server:{vind-version-based-tag}
 ```
 Now you can access the core named *vind* on http://localhost:8983/solr.
+
+## Tags
+
+Currently the follwing tags can be used:
+
+* **1.3.0** -> *vind version 1.3.0, solr version 5.5.4*
+* **2.0.0-RC1** -> *vind version 2.2.0-RC1, solr version 7.5.0*
