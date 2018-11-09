@@ -5,7 +5,13 @@ WORKDIR /solr
 ARG VERSION=2.0.0-RC1
 ARG SOLR_VERSION=7.5.0
 
+ARG DEFAULT_CORE=vind
+
 EXPOSE 8983
+
+ADD run.sh /solr
+
+ENV CORES=$DEFAULT_CORE
 
 RUN wget http://archive.apache.org/dist/lucene/solr/$SOLR_VERSION/solr-$SOLR_VERSION.zip && \
 unzip solr-$SOLR_VERSION.zip && \
@@ -17,9 +23,8 @@ wget https://search.maven.org/remotecontent?filepath=com/rbmhtechnology/vind/bac
 unzip solrhome.zip && \
 rm solrhome.zip && \
 cd solrhome/core && \
-echo $'name=vind\nruntimeLib=false'>core.properties && \
 mkdir lib && \
 cd lib && \
 wget https://search.maven.org/remotecontent?filepath=com/rbmhtechnology/vind/solr-suggestion-handler/${VERSION}/solr-suggestion-handler-${VERSION}.jar
 
-ENTRYPOINT ["sh", "-c", "solr/bin/solr start -f -force -s /solr/solrhome"]
+ENTRYPOINT ["sh", "./run.sh"]
