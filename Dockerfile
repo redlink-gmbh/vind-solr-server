@@ -2,7 +2,7 @@ FROM openjdk:8-jre-alpine
 
 WORKDIR /solr
 
-ARG VERSION=2.0.0-RC1
+ARG VERSION=2.0.0
 ARG SOLR_VERSION=7.5.0
 
 ARG DEFAULT_CORE=vind
