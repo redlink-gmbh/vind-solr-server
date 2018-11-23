@@ -19,5 +19,6 @@ Now you can access the core named *vind* on http://localhost:8983/solr.
 Currently the follwing tags can be used:
 
 * **1.3.0** -> *vind version 1.3.0, solr version 5.5.4*
-* **2.0.0-RC1** -> *vind version 2.2.0-RC1, solr version 7.5.0*
-* **2.0.0** -> *vind version 2.2.0, solr version 7.5.0*
+* **2.0.0-RC1** -> *vind version 2.0.0-RC1, solr version 7.5.0*
+* **2.0.0** -> *vind version 2.0.0, solr version 7.5.0*
+* **2.0.1** -> *vind version 2.0.1, solr version 7.5.0*
