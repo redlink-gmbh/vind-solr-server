@@ -27,7 +27,7 @@ RUN wget https://search.maven.org/remotecontent?filepath=com/rbmhtechnology/vind
     cd lib && \
     wget https://search.maven.org/remotecontent?filepath=com/rbmhtechnology/vind/solr-suggestion-handler/${VERSION}/solr-suggestion-handler-${VERSION}.jar
 # install bash
-RUN apl --update add \
+RUN apk --update add \
     bash
 
 VOLUME /solr/solrhome
