@@ -22,3 +22,4 @@ Currently the follwing tags can be used:
 * **2.0.0-RC1** -> *vind version 2.0.0-RC1, solr version 7.5.0*
 * **2.0.0** -> *vind version 2.0.0, solr version 7.5.0*
 * **2.0.1** -> *vind version 2.0.1, solr version 7.5.0*
+* **2.1.0** -> *vind version 2.1.0, solr version 7.5.0*
