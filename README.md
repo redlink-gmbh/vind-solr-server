@@ -31,3 +31,4 @@ Currently the follwing tags can be used:
 * **2.3.0** -> *vind version 2.3.0, solr version 7.5.0*
 * **2.3.1** -> *vind version 2.3.1, solr version 7.5.0*
 * **2.4.0** -> *vind version 2.4.0, solr version 7.5.0*
+* **2.4.1** -> *vind version 2.4.1, solr version 7.5.0*
