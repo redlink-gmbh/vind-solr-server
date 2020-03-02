@@ -22,7 +22,9 @@ RUN wget http://archive.apache.org/dist/lucene/solr/$SOLR_VERSION/solr-$SOLR_VER
 RUN wget https://search.maven.org/remotecontent?filepath=com/rbmhtechnology/vind/backend-solr/$VERSION/backend-solr-$VERSION.jar -O solrhome.zip && \
     unzip solrhome.zip && \
     rm solrhome.zip && \
-    cd solrhome/core && \
+    mv solrhome solrhome-template && \
+    mkdir solrhome && \
+    cd solrhome-template/core && \
     mkdir lib && \
     cd lib && \
     wget https://search.maven.org/remotecontent?filepath=com/rbmhtechnology/vind/solr-suggestion-handler/${VERSION}/solr-suggestion-handler-${VERSION}.jar
