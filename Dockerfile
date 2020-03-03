@@ -19,13 +19,16 @@ RUN wget http://archive.apache.org/dist/lucene/solr/$SOLR_VERSION/solr-$SOLR_VER
     rm solr-$SOLR_VERSION.zip && \
     mv solr-$SOLR_VERSION solr
 # download and install vind
-RUN wget https://search.maven.org/remotecontent?filepath=com/rbmhtechnology/vind/backend-solr/$VERSION/backend-solr-$VERSION.jar -O solrhome.zip && \
-    unzip solrhome.zip && \
+RUN wget "https://search.maven.org/remotecontent?filepath=com/rbmhtechnology/vind/backend-solr/$VERSION/backend-solr-$VERSION.jar" -O solrhome.zip && \
+    unzip solrhome.zip solrhome/* && \
     rm solrhome.zip && \
-    cd solrhome/core && \
+    mkdir -p solrhome/configsets && \
+    mv solrhome/core solrhome/configsets/vind && \
+    cd solrhome/configsets/vind && \
+    rm -f core.properties && \
     mkdir lib && \
     cd lib && \
-    wget https://search.maven.org/remotecontent?filepath=com/rbmhtechnology/vind/solr-suggestion-handler/${VERSION}/solr-suggestion-handler-${VERSION}.jar
+    wget "https://search.maven.org/remotecontent?filepath=com/rbmhtechnology/vind/solr-suggestion-handler/${VERSION}/solr-suggestion-handler-${VERSION}.jar" -O solr-suggestion-handler-${VERSION}.jar
 # install bash
 RUN apk --update add \
     bash
