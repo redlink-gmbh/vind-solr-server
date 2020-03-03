@@ -22,7 +22,7 @@ RUN wget http://archive.apache.org/dist/lucene/solr/$SOLR_VERSION/solr-$SOLR_VER
 RUN wget "https://search.maven.org/remotecontent?filepath=com/rbmhtechnology/vind/backend-solr/$VERSION/backend-solr-$VERSION.jar" -O solrhome.zip && \
     unzip solrhome.zip solrhome/* && \
     rm solrhome.zip && \
-    mkdir -p solrhome/configsets && \
+    mkdir -p solrhome/configsets solrhome/cores && \
     mv solrhome/core solrhome/configsets/vind && \
     cd solrhome/configsets/vind && \
     rm -f core.properties && \
@@ -33,6 +33,6 @@ RUN wget "https://search.maven.org/remotecontent?filepath=com/rbmhtechnology/vin
 RUN apk --update add \
     bash
 
-VOLUME /solr/solrhome
+VOLUME /solr/solrhome/cores
 
 ENTRYPOINT ["sh", "./run.sh"]

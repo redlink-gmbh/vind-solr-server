@@ -4,9 +4,9 @@ echo "Create cores $CORES";
 
 for i in $(echo $CORES  | sed "s/,/ /g")
 do
-    mkdir -p solrhome/${i}
+    mkdir -p solrhome/cores/${i}
     echo -e "name=$i\nconfigSet=vind\nruntimeLib=false" \
-         >solrhome/$i/core.properties
+         >solrhome/cores/$i/core.properties
 done
 
 echo "Start solr"
